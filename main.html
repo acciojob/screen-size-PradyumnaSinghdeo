@@ -12,5 +12,31 @@
 </script>
 
 </body>
+ <!-- The sizeInfo div to hold the window size information -->
+    <div id="sizeInfo">
+        <h1>Width: 0 and Height: 0</h1>
+    </div>
 
+    <script >
+		// Function to update the size information
+function updateSize() {
+    // Get the width and height of the window
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    // Get the h1 element within the sizeInfo div
+    const sizeInfo = document.getElementById('sizeInfo').querySelector('h1');
+
+    // Update the text content with the new width and height
+    sizeInfo.textContent = `Width: ${width} and Height: ${height}`;
+}
+
+// Initial size update when the page loads
+updateSize();
+
+// Event listener to update the size when the window is resized
+window.addEventListener('resize', updateSize);
+
+		
+	</script>
 </html>
